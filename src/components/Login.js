@@ -1,12 +1,33 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import { useState } from 'react'
 import {Link,useNavigate} from 'react-router-dom'
 import { auth } from './firebase'
+import {useStateValue} from './StateProvider'
 import './style/login.css'
  
  
 
 function Login() {
+  const [{},dispatch] = useStateValue()
+
+  useEffect(()=>{
+    auth.onAuthStateChanged(authUser => {
+      console.log("the use is >>>",authUser)
+
+      if (authUser){
+        dispatch({
+          type:'SET_USER',
+          user:authUser
+        })
+      }else{
+        dispatch({
+          type:'SET_USER',
+          user:null
+        })
+      }
+    })
+  },[])
+
   const navigate = useNavigate()
   const [email,setEmail] = useState('')
   const [password,SetPassword] = useState('')
