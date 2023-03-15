@@ -3,6 +3,7 @@ import Header from './components/Header'
 import Home from './components/Home'
 import Login from './components/Login'
 import Checkout from './components/Checkout'
+import Payment from './components/Payment'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
  
 
@@ -23,6 +24,16 @@ function App() {
               <Header />
               <Checkout />
             </div>
+          }
+        />
+        <Route
+          path='/payment'
+          element={
+            <div>
+              <Header />
+              <Payment />
+            </div>
+             
           }
         />
 
