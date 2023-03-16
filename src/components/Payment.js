@@ -3,6 +3,7 @@ import { useStateValue } from './StateProvider'
 import CheckoutProduct from './CheckoutProduct'
 import './style/payment.css'
 import {Link} from 'react-router-dom'
+import {CardElement,PaymentElement} from '@stripe/react-stripe-js';
 
 function Payment() {
 
@@ -46,12 +47,19 @@ function Payment() {
                 </div>
 
                 <div className='payment__section'>
+                    <div className='payment_method'>
+
                     <div className='payment__title'>
                         <h3>Payment method</h3>
                     </div>
-                    <iv className=" payment__detail">
-                        
-                    </iv>
+                    <div className=" payment__detail">
+                        <form>
+                           
+                                 
+                        </form>
+                    </div>
+                    </div>
+                     
                 </div>
              </div>
         </div>
