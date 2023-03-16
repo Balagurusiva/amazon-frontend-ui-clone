@@ -5,6 +5,10 @@ import Login from './components/Login'
 import Checkout from './components/Checkout'
 import Payment from './components/Payment'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { loadStripe } from '@stripe/stripe-js'
+import {Element} from '@stripe/react-stripe-js'
+
+const promise = loadStripe('pk_test_51Mm6oeSGHvckiQK3nElJpkYuzvNQJ3E60yFTsJGLXIC3Fue606pHxdAtfcjKq6IXxJKw70ZCJSfNRjmP1kwi1MH100670aGRSo')
  
 
 function App() {
