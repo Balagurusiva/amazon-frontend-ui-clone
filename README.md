@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Working model
+
+This project was deployed with netlify :[Amazon Frontend UI clone]([https://github.com/facebook/create-react-app](https://amazon-frontend-ui-clone.netlify.app/)).
+
 ## Available Scripts
 
 In the project directory, you can run:
